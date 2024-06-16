@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<div class="jumbotron p-5 mb-4 bg-light rounded-3">
+    <div class="container py-5">
+        <h1 class="display-4">Добро пожаловать на мой сайт!</h1>
+        <p class="lead">Вся информация находится во вкладке "Про меня".</p>
+        <hr class="my-4">
+        <p>На этом сайте вы найдете информацию обо мне, моем образовании, профессиональном опыте и личных интересах. Пожалуйста, зарегистрируйтесь или войдите в систему, чтобы получить полный доступ ко всем разделам.</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'about' %}" role="button">Узнать больше</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://avotar.ru/avatar/krutye/150/76.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Образование</h5>
+                    <p class="card-text">Информация о моем образовании, курсах и сертификатах.</p>
+                    <a href="{% url 'about' %}" class="btn btn-primary">Читать далее</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://lh3.googleusercontent.com/proxy/yUO3TjWJImZAsW6u9Qnx_ULwFXCl_jnTLXKBL06uk_NAR3qVmGz0pUIQ7J36_jP2A1f7ze4cS1hpY6xuysyNo-S4c5rz-EQOH3mOnNA" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Профессиональный опыт</h5>
+                    <p class="card-text">Описание моего профессионального опыта и проектов.</p>
+                    <a href="{% url 'about' %}" class="btn btn-primary">Читать далее</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://avatarko.ru/img/avatar/9/zhivotnye_kot_8100.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Личные интересы</h5>
+                    <p class="card-text">Мои хобби и интересы вне работы.</p>
+                    <a href="{% url 'about' %}" class="btn btn-primary">Читать далее</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block title %}Про меня{% endblock %}
+
+{% block content %}
+<h1>Про меня</h1>
+{% if user.is_authenticated %}
+    <p>Добро пожаловать, {{ user.username }}! Это страница "Про меня".</p>
+    <div class="container mt-4">
+
+        <div class="card mb-4">
+            <div class="card-header">
+                Основная информация
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Имя</h5>
+                <p class="card-text">Димитрий</p>
+
+                <h5 class="card-title">Возраст</h5>
+                <p class="card-text">18 лет</p>
+
+                <h5 class="card-title">Род занятий</h5>
+                <p class="card-text">Занимаюсь фул стaк разработкой</p>
+            </div>
+        </div>
+
+
+        <div class="card mb-4">
+            <div class="card-header">
+                Образование
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Высшее образование</h5>
+                <p class="card-text">Отсутствует</p>
+
+                <h5 class="card-title">Дополнительные курсы и сертификаты</h5>
+                <p class="card-text">Закончил 2 курс колледжа</p>
+            </div>
+        </div>
+
+
+        <div class="card mb-4">
+            <div class="card-header">
+                Профессиональный опыт
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Последняя работа</h5>
+                <p class="card-text">Сис админ ItHub</p>
+
+                <h5 class="card-title">Проекты</h5>
+                <p class="card-text">Написал не большоой сайтик abango.ru</p>
+            </div>
+        </div>
+
+
+        <div class="card mb-4">
+            <div class="card-header">
+                Личные интересы
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Хобби</h5>
+                <p class="card-text">Люблю спорт</p>
+
+                <h5 class="card-title">Любимые книги/фильмы</h5>
+                <p class="card-text">Любимый фильм про человека паука</p>
+            </div>
+        </div>
+    </div>
+{% else %}
+    <div class="alert alert-warning" role="alert">
+        <p>Вы не зарегистрированы. Пожалуйста, <a href="{% url 'signup' %}">зарегистрируйтесь</a>.</p>
+    </div>
+{% endif %}
+{% endblock %}
